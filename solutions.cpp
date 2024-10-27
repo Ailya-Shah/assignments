@@ -60,3 +60,21 @@ int main() {
     cout<< endl ;
     return 0;
 } 
+4. #include <iostream>
+using namespace std;
+
+int calculateFactorial(int N) {
+
+int sum =1;
+for (int i=1; i<=N; i++) {
+    sum*=i;
+}
+    return sum;
+}
+int main() {
+    int N;
+    cout << "Enter a numb to calculate factorial: ";
+    cin>>N;
+    cout<<"factorial is: "<< calculateFactorial(N);
+    return 0;
+}
