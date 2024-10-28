@@ -123,4 +123,40 @@ int main() {
         cout << endl;
     }
     return 0;
+}7. checking for prime number
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    int N;
+    cout << "Enter a number to check if it's prime: ";
+    cin >> N;
+
+    if (N <= 1) {
+        cout << N << " is not a prime number." << endl;
+    }
+    else if (N <= 3) {
+        cout << N << " is a prime number." << endl;
+    }
+    else if (N % 2 == 0) {
+        cout << N << " is not a prime number." << endl;
+    }
+    else {
+        int i = 3;
+        while (i <= sqrt(N)) {
+            if (N % i == 0) {
+                cout << N << " is not a prime number." << endl;
+                break;
+            }
+            i += 2;
+        }
+        
+        // If we reach this point, no factors were found
+        if (i > sqrt(N)) {
+            cout << N << " is a prime number." << endl;
+        }
+    }
+
+    return 0;
 }
