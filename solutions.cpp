@@ -78,3 +78,49 @@ int main() {
     cout<<"factorial is: "<< calculateFactorial(N);
     return 0;
 }
+5. print triangle with hollow effect
+#include <iostream>
+using namespace std;
+int main() {
+    int height;
+    cout << "Enter the height of a pyramid: ";
+    cin >> height;
+    for (int i=1; i<=height; i++) {
+        for (int j=i; j<height; j++) {
+            cout << " ";
+        }
+        for (int k=1; k <= (2*i-1); k++) {
+            if (k==1 || k== (2*i-1) || i==height){
+                cout << "*";
+            }
+        else {
+            cout << " ";
+             }
+        }
+        cout << endl;
+    }
+    return 0;
+} 
+6. number version of same code
+#include <iostream>
+using namespace std;
+int main() {
+    int height;
+    cout << "Enter the height of a pyramid: ";
+    cin >> height;
+    for (int i=1; i<=height; i++) {
+        for (int j=i; j<height; j++) {
+            cout << " " ;
+        }
+        for (int k=1; k <= (2*i-1); k++) {
+            if (k==1 || k== (2*i-1) || i==height){
+                cout << i;
+            }
+        else {
+            cout << " ";
+             }
+        }
+        cout << endl;
+    }
+    return 0;
+}
